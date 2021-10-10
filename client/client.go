@@ -168,6 +168,32 @@ func (c *Client) SendTransaction(ctx context.Context, param SendTransactionParam
 	return res.Result, nil
 }
 
+func (c *Client) SendTransactionSkipPreflight(ctx context.Context, param SendTransactionParam) (string, error) {
+	recentBlockhashRes, err := c.GetRecentBlockhash(ctx)
+	if err != nil {
+		return "", fmt.Errorf("failed to get recent blockhash, err: %v", err)
+	}
+	rawTx, err := types.CreateRawTransaction(types.CreateRawTransactionParam{
+		Instructions:    param.Instructions,
+		Signers:         param.Signers,
+		FeePayer:        param.FeePayer,
+		RecentBlockHash: recentBlockhashRes.Blockhash,
+	})
+	if err != nil {
+		return "", fmt.Errorf("failed to build tx, err: %v", err)
+	}
+	res, err := c.RpcClient.SendTransactionWithConfig(
+		ctx,
+		base64.StdEncoding.EncodeToString(rawTx),
+		rpc.SendTransactionConfig{Encoding: rpc.SendTransactionConfigEncodingBase64},
+	)
+	err = checkRpcResult(res.GeneralResponse, err)
+	if err != nil {
+		return "", err
+	}
+	return res.Result, nil
+}
+
 // SendTransaction2 send transaction struct directly
 func (c *Client) SendTransaction2(ctx context.Context, tx types.Transaction) (string, error) {
 	rawTx, err := tx.Serialize()
