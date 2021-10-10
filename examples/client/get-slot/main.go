@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/portto/solana-go-sdk/client"
-	"github.com/portto/solana-go-sdk/client/rpc"
+	"github.com/creamy-cpu/solana-go-sdk/client"
+	"github.com/creamy-cpu/solana-go-sdk/client/rpc"
 )
 
 func main() {

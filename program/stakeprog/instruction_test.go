@@ -4,9 +4,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/portto/solana-go-sdk/common"
-	"github.com/portto/solana-go-sdk/pkg/pointer"
-	"github.com/portto/solana-go-sdk/types"
+	"github.com/creamy-cpu/solana-go-sdk/common"
+	"github.com/creamy-cpu/solana-go-sdk/pkg/pointer"
+	"github.com/creamy-cpu/solana-go-sdk/types"
 )
 
 func TestSplit(t *testing.T) {

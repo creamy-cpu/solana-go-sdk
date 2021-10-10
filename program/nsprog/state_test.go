@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/portto/solana-go-sdk/common"
+	"github.com/creamy-cpu/solana-go-sdk/common"
 	"github.com/stretchr/testify/assert"
 )
 

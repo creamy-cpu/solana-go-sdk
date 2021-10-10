@@ -1,9 +1,9 @@
 package tokenprog
 
 import (
-	"github.com/portto/solana-go-sdk/common"
-	"github.com/portto/solana-go-sdk/pkg/bincode"
-	"github.com/portto/solana-go-sdk/types"
+	"github.com/creamy-cpu/solana-go-sdk/common"
+	"github.com/creamy-cpu/solana-go-sdk/pkg/bincode"
+	"github.com/creamy-cpu/solana-go-sdk/types"
 )
 
 type Instruction uint8

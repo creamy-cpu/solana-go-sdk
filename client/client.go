@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/portto/solana-go-sdk/client/rpc"
-	"github.com/portto/solana-go-sdk/common"
-	"github.com/portto/solana-go-sdk/types"
+	"github.com/creamy-cpu/solana-go-sdk/client/rpc"
+	"github.com/creamy-cpu/solana-go-sdk/common"
+	"github.com/creamy-cpu/solana-go-sdk/types"
 )
 
 type Client struct {

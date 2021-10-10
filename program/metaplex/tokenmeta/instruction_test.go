@@ -3,9 +3,9 @@ package tokenmeta
 import (
 	"testing"
 
+	"github.com/creamy-cpu/solana-go-sdk/common"
+	"github.com/creamy-cpu/solana-go-sdk/types"
 	"github.com/near/borsh-go"
-	"github.com/portto/solana-go-sdk/common"
-	"github.com/portto/solana-go-sdk/types"
 	"github.com/stretchr/testify/assert"
 )
 

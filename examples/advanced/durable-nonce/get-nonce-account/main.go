@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/portto/solana-go-sdk/client"
-	"github.com/portto/solana-go-sdk/program/sysprog"
+	"github.com/creamy-cpu/solana-go-sdk/client"
+	"github.com/creamy-cpu/solana-go-sdk/program/sysprog"
 )
 
 func main() {
